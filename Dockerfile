@@ -1,4 +1,4 @@
-       FROM ubuntu:latest 
+       FROM ubuntu:trusty 
  MAINTAINER George Georgulas IV <georgegeorgulasiv@gmail.com>
         ENV DEBIAN_FRONTEND noninteractive
        USER root
@@ -45,7 +45,7 @@
          && rm -rf /var/www/html \
          && git clone https://github.com/rathena/FluxCP.git /var/www/html \
          && git clone https://github.com/rathena/rathena.git /usr/bin/rathena \
-         && cd rathena \
+         && cd /usr/bin/rathena \
          && ./configure --enable-packetver=20150513 \
          && make server \
          && service mysql start \
